@@ -1,0 +1,14 @@
+<div class="cabecera-seccion">
+    <h1>Eliminar proveedor</h1>
+    <a href="/proveedores" class="btn btn-secundario">Volver</a>
+</div>
+<div class="aviso aviso-peligro">
+    <p>¿Confirmás que querés eliminar al proveedor <strong><%= proveedor.nombre %></strong>?</p>
+    <% if (productosAfectados > 0) { %>
+        <p>Hay <strong><%= productosAfectados %></strong> producto(s) asociados que quedarán como <em>"Sin proveedor"</em>.</p>
+    <% } %>
+</div>
+<form action="/proveedores/<%= proveedor.id %>?_method=DELETE" method="POST" class="formulario-botones">
+    <button type="submit" class="btn btn-peligro">Sí, eliminar</button>
+    <a href="/proveedores" class="btn btn-secundario">Cancelar</a>
+</form>

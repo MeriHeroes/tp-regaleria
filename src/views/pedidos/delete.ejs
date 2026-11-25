@@ -1,0 +1,12 @@
+<div class="cabecera-seccion">
+    <h1>Eliminar pedido</h1>
+    <a href="/pedidos" class="btn btn-secundario">Volver</a>
+</div>
+<div class="aviso aviso-peligro">
+    <p>¿Confirmás que querés eliminar el pedido <strong>#<%= pedido.id %></strong> de <strong><%= pedido.cliente_nombre %></strong>?</p>
+    <p>También se borrarán todos los productos cargados dentro de este pedido.</p>
+</div>
+<form action="/pedidos/<%= pedido.id %>?_method=DELETE" method="POST" class="formulario-botones">
+    <button type="submit" class="btn btn-peligro">Sí, eliminar pedido</button>
+    <a href="/pedidos" class="btn btn-secundario">Cancelar</a>
+</form>

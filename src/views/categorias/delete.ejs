@@ -1,0 +1,14 @@
+<div class="cabecera-seccion">
+    <h1>Eliminar categoría</h1>
+    <a href="/categorias" class="btn btn-secundario">Volver</a>
+</div>
+<div class="aviso aviso-peligro">
+    <p>¿Confirmás que querés eliminar la categoría <strong><%= categoria.nombre %></strong>?</p>
+    <% if (productosAfectados > 0) { %>
+        <p>Hay <strong><%= productosAfectados %></strong> producto(s) asociados que quedarán como <em>"Sin categoría"</em>.</p>
+    <% } %>
+</div>
+<form action="/categorias/<%= categoria.id %>?_method=DELETE" method="POST" class="formulario-botones">
+    <button type="submit" class="btn btn-peligro">Sí, eliminar</button>
+    <a href="/categorias" class="btn btn-secundario">Cancelar</a>
+</form>

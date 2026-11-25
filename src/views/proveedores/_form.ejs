@@ -1,0 +1,18 @@
+<div class="campo">
+    <label for="nombre">Nombre o Razón Social *</label>
+    <input type="text" id="nombre" name="nombre" value="<%= proveedor.nombre %>" required>
+</div>
+<div class="campo">
+    <label for="rubro">Rubro (ej: Cerámica, Velas, Papelería)</label>
+    <input type="text" id="rubro" name="rubro" value="<%= proveedor.rubro %>">
+</div>
+<div class="fila-doble">
+    <div class="campo">
+        <label for="telefono">Teléfono</label>
+        <input type="text" id="telefono" name="telefono" value="<%= proveedor.telefono %>">
+    </div>
+    <div class="campo">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" value="<%= proveedor.email %>">
+    </div>
+</div>

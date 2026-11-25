@@ -1,0 +1,14 @@
+<div class="cabecera-seccion">
+    <h1><%= cliente.nombre %></h1>
+    <div class="acciones">
+        <a href="/clientes/<%= cliente.id %>/edit" class="btn btn-secundario">Editar</a>
+        <a href="/clientes" class="btn btn-secundario">Volver</a>
+    </div>
+</div>
+<div class="ficha">
+    <div class="ficha-fila"><span class="ficha-etiqueta">ID</span><span><%= cliente.id %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Nombre</span><span><%= cliente.nombre %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Teléfono</span><span><%= cliente.telefono || '-' %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Email</span><span><%= cliente.email || '-' %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Notas</span><span><%= cliente.notas || 'Sin notas' %></span></div>
+</div>

@@ -1,0 +1,42 @@
+<div class="cabecera-seccion">
+    <h1>Nuevo pedido</h1>
+    <a href="/pedidos" class="btn btn-secundario">Volver</a>
+</div>
+
+<form action="/pedidos" method="POST" class="formulario">
+    <div class="campo">
+        <label for="cliente_id">Cliente</label>
+        <select id="cliente_id" name="cliente_id">
+            <option value="">-- Cliente ocasional --</option>
+            <% clientes.forEach(c => { %>
+                <option value="<%= c.id %>"><%= c.nombre %></option>
+            <% }) %>
+        </select>
+    </div>
+
+    <div class="fila-doble">
+        <div class="campo">
+            <label for="fecha">Fecha *</label>
+            <input type="date" id="fecha" name="fecha" value="<%= hoy %>" required>
+        </div>
+        <div class="campo">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado">
+                <option value="Pendiente">Pendiente</option>
+                <option value="En preparación">En preparación</option>
+                <option value="Listo para entregar">Listo para entregar</option>
+                <option value="Entregado">Entregado</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="campo">
+        <label for="dedicatoria">Tarjeta / Dedicatoria del regalo</label>
+        <textarea id="dedicatoria" name="dedicatoria" rows="3" placeholder="Ej: ¡Feliz cumple! Con cariño..."></textarea>
+    </div>
+
+    <div class="formulario-botones">
+        <button type="submit" class="btn btn-primario">Crear y agregar productos</button>
+        <a href="/pedidos" class="btn btn-secundario">Cancelar</a>
+    </div>
+</form>

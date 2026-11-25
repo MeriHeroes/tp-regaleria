@@ -1,0 +1,14 @@
+<header class="encabezado">
+    <div class="encabezado-contenio">
+        <a href="/" class="marca">Mi Regalería</a>
+        <nav class="menu">
+            <a href="/" class="<%= ruta === '/' ? 'activo' : '' %>">Inicio</a>
+            <a href="/categorias" class="<%= ruta.startsWith('/categorias') ? 'activo' : '' %>">Categorías</a>
+            <a href="/proveedores" class="<%= ruta.startsWith('/proveedores') ? 'activo' : '' %>">Proveedores</a>
+            <a href="/productos" class="<%= ruta.startsWith('/productos') ? 'activo' : '' %>">Productos</a>
+            <a href="/clientes" class="<%= ruta.startsWith('/clientes') ? 'activo' : '' %>">Clientes</a>
+            <a href="/pedidos" class="<%= ruta.startsWith('/pedidos') ? 'activo' : '' %>">Pedidos</a>
+            <a href="/contacto" class="<%= ruta.startsWith('/contacto') ? 'activo' : '' %>">Contacto</a>
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,15 @@
+<div class="cabecera-seccion">
+    <h1><%= producto.nombre %></h1>
+    <div class="acciones">
+        <a href="/productos/<%= producto.id %>/edit" class="btn btn-secundario">Editar</a>
+        <a href="/productos" class="btn btn-secundario">Volver</a>
+    </div>
+</div>
+<div class="ficha">
+    <div class="ficha-fila"><span class="ficha-etiqueta">ID</span><span><%= producto.id %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Categoría</span><span><%= producto.categoria_nombre %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Proveedor</span><span><%= producto.proveedor_nombre %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Precio</span><span><strong>$ <%= Number(producto.precio).toFixed(2) %></strong></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Stock</span><span><%= producto.stock %> unidades</span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Descripción</span><span><%= producto.descripcion || 'Sin descripción' %></span></div>
+</div>

@@ -1,0 +1,11 @@
+<div class="cabecera-seccion">
+    <h1>Editar proveedor</h1>
+    <a href="/proveedores" class="btn btn-secundario">Volver</a>
+</div>
+<form action="/proveedores/<%= proveedor.id %>?_method=PUT" method="POST" class="formulario">
+    <%- include('_form') %>
+    <div class="formulario-botones">
+        <button type="submit" class="btn btn-primario">Actualizar</button>
+        <a href="/proveedores" class="btn btn-secundario">Cancelar</a>
+    </div>
+</form>

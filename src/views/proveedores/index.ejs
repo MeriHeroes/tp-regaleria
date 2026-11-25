@@ -1,0 +1,39 @@
+<div class="cabecera-seccion">
+    <h1>Proveedores</h1>
+    <a href="/proveedores/create" class="btn btn-primario">+ Nuevo proveedor</a>
+</div>
+
+<% if (proveedores.length === 0) { %>
+    <div class="vacio">
+        <p>Todavía no hay proveedores registrados.</p>
+        <a href="/proveedores/create" class="btn btn-primario">Agregar el primero</a>
+    </div>
+<% } else { %>
+    <div class="tabla-contenedor">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Rubro</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% proveedores.forEach(p => { %>
+                    <tr>
+                        <td><a href="/proveedores/<%= p.id %>"><strong><%= p.nombre %></strong></a></td>
+                        <td><%= p.rubro || '-' %></td>
+                        <td><%= p.telefono || '-' %></td>
+                        <td><%= p.email || '-' %></td>
+                        <td class="acciones">
+                            <a href="/proveedores/<%= p.id %>/edit" class="btn btn-chico btn-secundario">Editar</a>
+                            <a href="/proveedores/<%= p.id %>/delete" class="btn btn-chico btn-peligro">Eliminar</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+<% } %>

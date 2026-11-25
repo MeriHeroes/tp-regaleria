@@ -1,0 +1,503 @@
+/* ============================================================================
+    HOJA DE ESTILOS - PALETA CHERRY (Regalería)
+   ============================================================================ */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #fdf8f8;
+    color: #2c1419;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ---------- Encabezado y navegación ---------- */
+.encabezado {
+    background-color: #4a0e1c;
+    color: #ffffff;
+    border-bottom: 4px solid #b81d3a;
+}
+
+.encabezado-contenido {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0.95rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+
+.marca {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.3px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+}
+
+.menu a {
+    color: #f8d7de;
+    text-decoration: none;
+    padding: 0.45rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.92rem;
+    transition: background-color 0.15s, color 0.15s;
+}
+
+.menu a:hover {
+    background-color: #6b1529;
+    color: #ffffff;
+}
+
+.menu a.activo {
+    background-color: #b81d3a;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* ---------- Contenedor principal y pie ---------- */
+.contenedor {
+    max-width: 1120px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.25rem;
+    flex: 1;
+}
+
+.pie {
+    background-color: #4a0e1c;
+    color: #e8b8c3;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.85rem;
+    margin-top: 3rem;
+}
+
+/* ---------- Banner de bienvenida (Hero Cherry) ---------- */
+.hero-cherry {
+    background: linear-gradient(135deg, #4a0e1c 0%, #8a152c 60%, #b81d3a 100%);
+    color: #ffffff;
+    border-radius: 14px;
+    padding: 2.25rem 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    box-shadow: 0 8px 20px rgba(74, 14, 28, 0.15);
+}
+
+.hero-cherry h1 {
+    color: #ffffff;
+    font-size: 1.9rem;
+    margin-bottom: 0.4rem;
+}
+
+.hero-cherry p {
+    color: #f8d7de;
+    max-width: 560px;
+    font-size: 1rem;
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.btn-hero-claro {
+    background-color: #ffffff;
+    color: #6b1529;
+    font-weight: 600;
+}
+
+.btn-hero-borde {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+/* ---------- Cabecera de sección ---------- */
+.cabecera-seccion {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-size: 1.65rem;
+    color: #4a0e1c;
+}
+
+h2 {
+    font-size: 1.25rem;
+    color: #4a0e1c;
+    margin-bottom: 0.75rem;
+}
+
+.subtitulo {
+    color: #7a4b55;
+    margin-top: 0.25rem;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
+    line-height: 1.4;
+    transition: opacity 0.15s, background-color 0.15s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-primario {
+    background-color: #9e1932;
+    color: #ffffff;
+}
+
+.btn-secundario {
+    background-color: #f4e4e7;
+    color: #4a0e1c;
+    border-color: #e2c2c9;
+}
+
+.btn-peligro {
+    background-color: #c81e1e;
+    color: #ffffff;
+}
+
+.btn-chico {
+    padding: 0.3rem 0.65rem;
+    font-size: 0.85rem;
+}
+
+/* ---------- Grilla de Catálogo de Productos ---------- */
+.catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.producto-card {
+    background-color: #ffffff;
+    border: 1px solid #eed6db;
+    border-radius: 12px;
+    padding: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 3px 10px rgba(74, 14, 28, 0.05);
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.producto-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(74, 14, 28, 0.1);
+}
+
+.producto-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.producto-titulo {
+    font-size: 1.15rem;
+    color: #4a0e1c;
+    text-decoration: none;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 0.35rem;
+}
+
+.producto-titulo:hover {
+    color: #b81d3a;
+}
+
+.producto-desc {
+    color: #7a4b55;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.producto-meta {
+    font-size: 0.85rem;
+    color: #8c5a65;
+    margin-bottom: 0.75rem;
+}
+
+.producto-footer {
+    border-top: 1px solid #f5e6e9;
+    padding-top: 0.85rem;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.producto-precio {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #9e1932;
+}
+
+.stock-ok {
+    font-size: 0.8rem;
+    color: #166534;
+    background-color: #dcfce7;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+.stock-bajo {
+    font-size: 0.8rem;
+    color: #991b1b;
+    background-color: #fee2e2;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+}
+
+/* ---------- Tablas ---------- */
+.tabla-contenedor {
+    background-color: #ffffff;
+    border: 1px solid #eed6db;
+    border-radius: 10px;
+    overflow-x: auto;
+    box-shadow: 0 2px 6px rgba(74, 14, 28, 0.04);
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.tabla th {
+    background-color: #faeff1;
+    color: #5e1727;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    border-bottom: 2px solid #e8c5cd;
+    font-weight: 600;
+}
+
+.tabla td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f5e6e9;
+    vertical-align: middle;
+}
+
+.tabla tbody tr:hover {
+    background-color: #fdf6f7;
+}
+
+.tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.num {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.acciones {
+    white-space: nowrap;
+    display: flex;
+    gap: 0.4rem;
+}
+
+/* ---------- Etiquetas de estado ---------- */
+.badge {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background-color: #f8e1e6;
+    color: #8a152c;
+}
+
+/* ---------- Tarjetas Dashboard ---------- */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.tarjeta {
+    background-color: #ffffff;
+    border: 1px solid #eed6db;
+    border-top: 4px solid #b81d3a;
+    border-radius: 10px;
+    padding: 1.25rem;
+    box-shadow: 0 2px 6px rgba(74, 14, 28, 0.04);
+}
+
+.tarjeta-numero {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #8a152c;
+    line-height: 1.1;
+}
+
+.tarjeta-etiqueta {
+    color: #7a4b55;
+    margin-top: 0.35rem;
+    font-size: 0.92rem;
+}
+
+/* ---------- Formularios ---------- */
+.formulario {
+    background-color: #ffffff;
+    border: 1px solid #eed6db;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 600px;
+    box-shadow: 0 2px 6px rgba(74, 14, 28, 0.04);
+}
+
+.campo {
+    margin-bottom: 1.15rem;
+}
+
+.campo label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+    color: #4a0e1c;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 0.55rem 0.75rem;
+    border: 1px solid #d9b6be;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background-color: #ffffff;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: #b81d3a;
+    box-shadow: 0 0 0 3px rgba(184, 29, 58, 0.15);
+}
+
+.fila-doble {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.formulario-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+/* ---------- Fichas y Avisos ---------- */
+.ficha {
+    background-color: #ffffff;
+    border: 1px solid #eed6db;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 680px;
+    margin-bottom: 1.5rem;
+}
+
+.ficha-fila {
+    display: flex;
+    gap: 1rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #f5e6e9;
+}
+
+.ficha-fila:last-child {
+    border-bottom: none;
+}
+
+.ficha-etiqueta {
+    width: 160px;
+    font-weight: 600;
+    color: #7a4b55;
+    flex-shrink: 0;
+}
+
+.aviso {
+    background-color: #fff5f7;
+    border: 1px solid #f2c2cc;
+    border-left: 4px solid #b81d3a;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    max-width: 680px;
+}
+
+.aviso-peligro {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+    border-left-color: #dc2626;
+}
+
+.vacio {
+    background-color: #ffffff;
+    border: 1px dashed #d9b6be;
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    color: #7a4b55;
+}
+
+.vacio p {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .fila-doble {
+        grid-template-columns: 1fr;
+    }
+    .ficha-fila {
+        flex-direction: column;
+        gap: 0.2rem;
+    }
+}

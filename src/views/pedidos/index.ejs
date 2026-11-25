@@ -1,0 +1,41 @@
+<div class="cabecera-seccion">
+    <h1>Pedidos</h1>
+    <a href="/pedidos/create" class="btn btn-primario">+ Nuevo pedido</a>
+</div>
+
+<% if (pedidos.length === 0) { %>
+    <div class="vacio">
+        <p>No hay pedidos registrados todavía.</p>
+        <a href="/pedidos/create" class="btn btn-primario">Crear primer pedido</a>
+    </div>
+<% } else { %>
+    <div class="tabla-contenedor">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Fecha</th>
+                    <th>Cliente</th>
+                    <th>Estado</th>
+                    <th class="num">Total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% pedidos.forEach(pe => { %>
+                    <tr>
+                        <td><strong>#<%= pe.id %></strong></td>
+                        <td><%= pe.fecha %></td>
+                        <td><%= pe.cliente_nombre %></td>
+                        <td><span class="badge"><%= pe.estado %></span></td>
+                        <td class="num"><strong>$ <%= Number(pe.total).toFixed(2) %></strong></td>
+                        <td class="acciones">
+                            <a href="/pedidos/<%= pe.id %>" class="btn btn-chico btn-primario">Ver / Items</a>
+                            <a href="/pedidos/<%= pe.id %>/delete" class="btn btn-chico btn-peligro">Eliminar</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+<% } %>

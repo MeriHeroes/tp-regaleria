@@ -1,0 +1,37 @@
+<div class="cebecera-seccion">
+    <h1>Categorías</h1>
+    <a href="/categorias/create" class="btn btn-primario">+ Nueva categoría</a>
+</div>
+
+<% if (categorias.length === 0) { %>
+    <div class="vacio">
+        <p>Todavía no hay categorías cargadas.</p>
+        <a href="/categorias/create" class="btn btn-primario">Crear la primera</a>
+    </div>
+    <% } else { %>
+    <div class="tabla-contenedor">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% categorias.forEach(c => { %>
+                <tr>
+                    <td><%= c.id %></td>
+                    <td><a href="/categorias/<%= c.id %>"><strong><%= c.nombre %></strong></a></td>
+                    <td><%= c.descripcion || '-' %></td>
+                    <td class="acciones">
+                        <a href="/categorias/<%= c.id %>/edit" class="btn btn-chico btn-secundario">Editar</a>
+                        <a href="/categorias/<%= c.id %>/delete" class="btn btn-chico btn-peligro">Eliminar</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+<% } %>

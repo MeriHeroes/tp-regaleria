@@ -1,0 +1,12 @@
+<div class="cabecera-seccion">
+    <h1>Eliminar cliente</h1>
+    <a href="/clientes" class="btn btn-secundario">Volver</a>
+</div>
+<div class="aviso aviso-peligro">
+    <p>¿Confirmás que querés eliminar al cliente <strong><%= cliente.nombre %></strong>?</p>
+    <p>Sus pedidos históricos quedarán registrados como <em>"Cliente ocasional"</em>.</p>
+</div>
+<form action="/clientes/<%= cliente.id %>?_method=DELETE" method="POST" class="formulario-botones">
+    <button type="submit" class="btn btn-peligro">Sí, eliminar</button>
+    <a href="/clientes" class="btn btn-secundario">Cancelar</a>
+</form>

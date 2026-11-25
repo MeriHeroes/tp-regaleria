@@ -1,0 +1,12 @@
+<div class="cabecera-seccion">
+    <h1><%= categoria.nombre %></h1>
+    <div class="acciones">
+        <a href="/categorias/<%= categoria.id %>/edit" class="btn btn-secundario">Editar</a>
+        <a href="/categorias" class="btn btn-secundario">Volver</a>
+    </div>
+</div>
+<div class="ficha">
+    <div class="ficha-fila"><span class="ficha-etiqueta">ID</span><span><%= categoria.id %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Nombre</span><span><%= categoria.nombre %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Descripción</span><span><%= categoria.descripcion || 'Sin descripción' %></span></div>
+</div>

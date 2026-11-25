@@ -1,0 +1,16 @@
+<div class="contenedor contenedor-error">
+    <h1>No pudimos enviar tu mensaje</h1>
+    <p>Hubo un problema con el servicio de correo, <strong><%= name %></strong>. Tu mensaje no fue enviado.</p>
+    <p>Copiá tu mensaje antes de salir de esta pantalla:</p>
+
+
+    <!-- readonly: se puede seleccionar y copiar, pero no modificar -->
+    <div class="campo">
+        <label for="mensaje-copia">Tu mensaje</label>
+        <textarea id="mensaje-copia" rows="6" readonly><%= message %></textarea>
+    </div>
+
+
+    <a class="btn btn-primario" href="/contacto">Intentar nuevamente</a>
+    <a class="btn btn-secundario" href="/">Volver al inicio</a>
+</div>

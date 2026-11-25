@@ -1,0 +1,12 @@
+<div class="cabecera-seccion">
+    <h1>Eliminar regalo</h1>
+    <a href="/productos" class="btn btn-secundario">Volver</a>
+</div>
+<div class="aviso aviso-peligro">
+    <p>¿Confirmás que querés eliminar el producto <strong><%= producto.nombre %></strong>?</p>
+    <p>Esta acción no se puede deshacer.</p>
+</div>
+<form action="/productos/<%= producto.id %>?_method=DELETE" method="POST" class="formulario-botones">
+    <button type="submit" class="btn btn-peligro">Sí, eliminar</button>
+    <a href="/productos" class="btn btn-secundario">Cancelar</a>
+</form>

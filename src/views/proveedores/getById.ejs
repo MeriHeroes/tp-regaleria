@@ -1,0 +1,14 @@
+<div class="cabecera-seccion">
+    <h1><%= proveedor.nombre %></h1>
+    <div class="acciones">
+        <a href="/proveedores/<%= proveedor.id %>/edit" class="btn btn-secundario">Editar</a>
+        <a href="/proveedores" class="btn btn-secundario">Volver</a>
+    </div>
+</div>
+<div class="ficha">
+    <div class="ficha-fila"><span class="ficha-etiqueta">ID</span><span><%= proveedor.id %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Nombre</span><span><%= proveedor.nombre %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Rubro</span><span><%= proveedor.rubro || 'No especificado' %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Teléfono</span><span><%= proveedor.telefono || '-' %></span></div>
+    <div class="ficha-fila"><span class="ficha-etiqueta">Email</span><span><%= proveedor.email || '-' %></span></div>
+</div>

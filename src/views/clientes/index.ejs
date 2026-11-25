@@ -1,0 +1,39 @@
+<div class="cabecera-seccion">
+    <h1>Clientes</h1>
+    <a href="/clientes/create" class="btn btn-primario">+ Nuevo cliente</a>
+</div>
+
+<% if (clientes.length === 0) { %>
+    <div class="vacio">
+        <p>Todavía no hay clientes registrados.</p>
+        <a href="/clientes/create" class="btn btn-primario">Registrar cliente</a>
+    </div>
+<% } else { %>
+    <div class="tabla-contenedor">
+        <table class="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Notas</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% clientes.forEach(c => { %>
+                    <tr>
+                        <td><a href="/clientes/<%= c.id %>"><strong><%= c.nombre %></strong></a></td>
+                        <td><%= c.telefono || '-' %></td>
+                        <td><%= c.email || '-' %></td>
+                        <td><%= c.notas || '-' %></td>
+                        <td class="acciones">
+                            <a href="/clientes/<%= c.id %>/edit" class="btn btn-chico btn-secundario">Editar</a>
+                            <a href="/clientes/<%= c.id %>/delete" class="btn btn-chico btn-peligro">Eliminar</a>
+                        </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+<% } %>

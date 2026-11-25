@@ -1,0 +1,23 @@
+<div class="encabezado-pagina">
+    <h1>Contacto</h1>
+    <p>Escribinos y te respondemos por correo.</p>
+</div>
+
+
+<form class="formulario" action="/contacto" method="post">
+    <div class="campo">
+        <label for="name">Nombre</label>
+        <input type="text" name="name" id="name" required>
+    </div>
+    <div class="campo">
+        <label for="mail">Correo</label>
+        <input type="email" name="mail" id="mail" required>
+    </div>
+    <div class="campo">
+        <label for="message">Mensaje</label>
+        <textarea name="message" id="message" rows="8" required></textarea>
+    </div>
+    <div class="formulario-acciones">
+        <button class="btn btn-primario" type="submit">Enviar mensaje</button>
+    </div>
+</form>

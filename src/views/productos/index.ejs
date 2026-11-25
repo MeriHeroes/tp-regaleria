@@ -1,0 +1,43 @@
+<div class="cabecera-seccion">
+    <div>
+        <h1>Catálogo de Regalos</h1>
+        <p class="subtitulo">Explorá y administrá los productos disponibles de la tienda.</p>
+    </div>
+    <a href="/productos/create" class="btn btn-primario">+ Nuevo producto</a>
+</div>
+
+<% if (productos.length === 0) { %>
+    <div class="vacio">
+        <p>Todavía no hay regalos cargados en el catálogo.</p>
+        <a href="/productos/create" class="btn btn-primario">Cargar primer regalo</a>
+    </div>
+<% } else { %>
+    <div class="catalogo-grid">
+        <% productos.forEach(p => { %>
+            <article class="producto-card">
+                <div>
+                    <div class="producto-card-top">
+                        <span class="badge"><%= p.categoria_nombre %></span>
+                        <% if (p.stock > 3) { %>
+                            <span class="stock-ok">Stock: <%= p.stock %></span>
+                        <% } else { %>
+                            <span class="stock-bajo">Stock: <%= p.stock %></span>
+                        <% } %>
+                    </div>
+
+                    <a href="/productos/<%= p.id %>" class="producto-titulo"><%= p.nombre %></a>
+                    <p class="producto-desc"><%= p.descripcion || 'Sin descripción cargada.' %></p>
+                    <p class="producto-meta">Proveedor: <strong><%= p.proveedor_nombre %></strong></p>
+                </div>
+
+                <div class="producto-footer">
+                    <span class="producto-precio">$ <%= Number(p.precio).toFixed(2) %></span>
+                    <div class="acciones">
+                        <a href="/productos/<%= p.id %>/edit" class="btn btn-chico btn-secundario">Editar</a>
+                        <a href="/productos/<%= p.id %>/delete" class="btn btn-chico btn-peligro">Borrar</a>
+                    </div>
+                </div>
+            </article>
+        <% }) %>
+    </div>
+<% } %>

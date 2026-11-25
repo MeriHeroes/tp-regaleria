@@ -1,0 +1,39 @@
+<section class="hero-cherry">
+    <div>
+        <h1>Gestión de Regalería</h1>
+        <p>Organizá tu catálogo de regalos, proveedores, clientes frecuentes y pedidos personalizados en un solo lugar.</p>
+    </div>
+    <div class="hero-botones">
+        <a href="/pedidos/create" class="btn btn-hero-claro">+ Nuevo pedido</a>
+        <a href="/productos/create" class="btn btn-hero-borde">+ Cargar regalo</a>
+    </div>
+</section>
+
+<h2>Resumen del emprendimiento</h2>
+
+<div class="tarjetas">
+    <div class="tarjeta">
+        <div class="tarjeta-numero"><%= totalProductos %></div>
+        <div class="tarjeta-etiqueta">Regalos en catálogo</div>
+    </div>
+    <div class="tarjeta">
+        <div class="tarjeta-numero"><%= totalStock %></div>
+        <div class="tarjeta-etiqueta">Unidades disponibles</div>
+    </div>
+    <div class="tarjeta">
+        <div class="tarjeta-numero"><%= totalCategorias %></div>
+        <div class="tarjeta-etiqueta">Categorías</div>
+    </div>
+    <div class="tarjeta">
+        <div class="tarjeta-numero"><%= totalProveedores %></div>
+        <div class="tarjeta-etiqueta">Proveedores</div>
+    </div>
+    <div class="tarjeta">
+        <div class="tarjeta-numero"><%= totalClientes %></div>
+        <div class="tarjeta-etiqueta">Clientes registrados</div>
+    </div>
+    <div class="tarjeta">
+        <div class="tarjeta-numero"><%= totalPedidos %></div>
+        <div class="tarjeta-etiqueta">Pedidos totales</div>
+    </div>
+</div>
